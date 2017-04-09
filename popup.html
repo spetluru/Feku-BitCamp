@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Feku</title>
+    <style>
+    .progress {
+      height: 10px;
+      width: 140px;
+    }
+    .progress > svg {
+      height: 100%;
+      display: block;
+    }
+    svg {
+      width: 80%;
+      height: 80%;
+    }
+    text{
+      text-anchor: middle;
+      pointer-events: auto;
+    }
+    line-container
+    {
+      vertical-align: middle;
+      text-align: center;
+    }
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="progressbar.js"></script> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery 2.1.4.min.js"></script>
+    <script src="popup.js"></script>
+	
+  </head>
+  <body>
+    <div class="progress" id="line-container">
+	<h3>Feku's Verdict</h3>
+
+
+     <!--<div style="float: left; width: 48%" id="leftdiv">
+        <div style="position: fixed;top: 92px;left: 80px;font-size: 16px" id="lefttb">Hello!</div>
+      </div>
+
+      <div style="float: right; width: 48%;" id="rightdiv">
+        <div style="position: fixed;top: 92px;right: 80px;font-size: 16px" id="righttb">Hello!</div>
+      </div>-->
+    <div id="Status"></div>
+    </div>
+  </body>
+</html>
+
